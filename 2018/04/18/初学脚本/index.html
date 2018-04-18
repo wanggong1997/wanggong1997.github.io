@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="初学脚本 写一个脚本  1.找个地方新建文件，后缀随意，一般来说脚本的后缀是 .sh。我这里创一个~/father的目录在desktop下面1234cd ~/desktopmkdir fathercd fathertouch demon.txt 这里我新建了一个名叫demon的文本文件 2.进入这个demon的文本文件 然后你可以把它当成一个编辑器来编写一个脚本(当然里面的命令要等到我们都写完才能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初学脚本">
+<meta property="og:url" content="http://yoursite.com/2018/04/18/初学脚本/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="初学脚本 写一个脚本  1.找个地方新建文件，后缀随意，一般来说脚本的后缀是 .sh。我这里创一个~/father的目录在desktop下面1234cd ~/desktopmkdir fathercd fathertouch demon.txt 这里我新建了一个名叫demon的文本文件 2.进入这个demon的文本文件 然后你可以把它当成一个编辑器来编写一个脚本(当然里面的命令要等到我们都写完才能">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-18T14:43:25.248Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初学脚本">
+<meta name="twitter:description" content="初学脚本 写一个脚本  1.找个地方新建文件，后缀随意，一般来说脚本的后缀是 .sh。我这里创一个~/father的目录在desktop下面1234cd ~/desktopmkdir fathercd fathertouch demon.txt 这里我新建了一个名叫demon的文本文件 2.进入这个demon的文本文件 然后你可以把它当成一个编辑器来编写一个脚本(当然里面的命令要等到我们都写完才能">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/18/初学脚本/"/>
+
+
+
+
+
+  <title>初学脚本 | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/初学脚本/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">初学脚本</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T22:40:59+08:00">
+                2018-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="初学脚本"><a href="#初学脚本" class="headerlink" title="初学脚本"></a>初学脚本</h1><blockquote>
+<p>写一个脚本</p>
+</blockquote>
+<h3 id="1-找个地方新建文件，后缀随意，一般来说脚本的后缀是-sh。我这里创一个-father的目录在desktop下面"><a href="#1-找个地方新建文件，后缀随意，一般来说脚本的后缀是-sh。我这里创一个-father的目录在desktop下面" class="headerlink" title="1.找个地方新建文件，后缀随意，一般来说脚本的后缀是 .sh。我这里创一个~/father的目录在desktop下面"></a><strong>1.找个地方新建文件，后缀随意，一般来说脚本的后缀是 .sh。我这里创一个~/father的目录在desktop下面</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~/desktop</span><br><span class="line">mkdir father</span><br><span class="line">cd father</span><br><span class="line">touch demon.txt</span><br></pre></td></tr></table></figure>
+<p><em>这里我新建了一个名叫demon的文本文件</em></p>
+<h3 id="2-进入这个demon的文本文件-然后你可以把它当成一个编辑器来编写一个脚本-当然里面的命令要等到我们都写完才能看到"><a href="#2-进入这个demon的文本文件-然后你可以把它当成一个编辑器来编写一个脚本-当然里面的命令要等到我们都写完才能看到" class="headerlink" title="2.进入这个demon的文本文件 然后你可以把它当成一个编辑器来编写一个脚本(当然里面的命令要等到我们都写完才能看到)"></a><strong>2.进入这个demon的文本文件 然后你可以把它当成一个编辑器来编写一个脚本(当然里面的命令要等到我们都写完才能看到)</strong></h3><p><em>编辑内容如下：</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir demo</span><br><span class="line"> cd demo</span><br><span class="line"> mkdir css js</span><br><span class="line"> touch index.html css/style.css js/main.js</span><br><span class="line"> exit</span><br></pre></td></tr></table></figure>
+<p>那么在demon.txt里面呢我又编辑了这些命令 好了那么接下来呢我要去执行他(在这里呢需要注意的是我要把”demon.txt”换成”demon.sh”)</p>
+<p>像这样:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd father</span><br><span class="line">mv demon.txt demon.sh</span><br></pre></td></tr></table></figure></p>
+<p>因为我是windows用户所以不需要给我的demon.sh添加执行权限的指令<code>chmod +x demo.txt</code>不过ios这一步是需要的</p>
+<h3 id="3-那么接下来我就要开始运行我的脚本了-脚本是可以在任何位置来运行它的-但是首先你还是要知道它的绝对路径啦ヾ-≧▽≦-o哈哈哈"><a href="#3-那么接下来我就要开始运行我的脚本了-脚本是可以在任何位置来运行它的-但是首先你还是要知道它的绝对路径啦ヾ-≧▽≦-o哈哈哈" class="headerlink" title="3.那么接下来我就要开始运行我的脚本了(脚本是可以在任何位置来运行它的 但是首先你还是要知道它的绝对路径啦ヾ(≧▽≦*)o哈哈哈)"></a><strong>3.那么接下来我就要开始运行我的脚本了(脚本是可以在任何位置来运行它的 但是首先你还是要知道它的绝对路径啦ヾ(≧▽≦*)o哈哈哈)</strong></h3><p>比如我退回到了我的desktop里 <code>cd desktop</code><br>我很明白我的脚本在~/desktop/father里所以<code>sh ~/desktop/father/demon.sh</code></p>
+<h3 id="4-到了这一步恭喜你已经完成了自己的第一个脚本"><a href="#4-到了这一步恭喜你已经完成了自己的第一个脚本" class="headerlink" title="4.到了这一步恭喜你已经完成了自己的第一个脚本"></a>4.到了这一步恭喜你已经完成了自己的第一个脚本</h3><p> <em>但是我每次都要输<code>sh ~/desktop/father/demon.sh</code>实在太复杂了 有没有一种方法我直接输入demon就可以执行该脚本</em></p>
+<p>那么首先将 ~/father 添加到 PATH 里</p>
+<blockquote>
+<p>PATH 的作用<br>你每次在 Bash 里面输入一个命令时（比如 ls、cp、demo），Bash 都会去 PATH 列表里面寻找对应的文件，如果找到了就执行。</p>
+</blockquote>
+<p>i. <code>cd ~/father</code>; pwd 得到 father 的绝对路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/father</span><br><span class="line">pwd</span><br><span class="line">/c/Users/wanggong/desktop/father</span><br></pre></td></tr></table></figure></p>
+<p>好那么<code>/c/Users/wanggong/desktop/father</code>就是我的绝对路径了<br>ii .接下来创建 ~/.bashrc：<code>touch ~/.bashrc</code>(“.bashrc”呢就像是一个工作环境你要用他来创建你的快捷方式 这里呢我也是希望用来来创建一个快捷方式最终达到我的目的)<br>iii .编辑 ~/.bashrc：<code>start ~/.bashrc</code>，在最后一行添加 <code>export PATH=&quot;local的绝对路径:$PATH&quot;</code><br>这边我就可以换成 <code>export PATH=&quot;/c/Users/wanggong/desktop/father:$PATH&quot;</code><br>iv.<code>source ~/.bashrc</code><br>v.之前你要运行 <code>sh ~/desktop/father/demon.sh</code>，现在你只需要运行 <code>demo.txt</code> 就行了（想想为什么，道理显而易见）<br>6.demo.txt 的后缀 .txt 很无聊，删掉它<code>mv ~/local/demo.txt ~/local/demo</code><br>现在你只要运行 <code>demo</code> 就能执行该脚本了。</p>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>demo 脚本只能创建名字为 demon 的目录，太无聊了，我们让目录名是可变的吧。</p>
+<blockquote>
+<p>我们只要把我们刚刚名叫demon的脚本改成下面这样:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir $1</span><br><span class="line">cd $1</span><br><span class="line">mkdir css js</span><br><span class="line">touch index.html css/style.css js/main.js</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>$1表示参数 我可以让我的目录变成任何我想要变成的名字</p>
+</blockquote>
+<p>我还是去desktop上运行他们<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">demon XXX</span><br></pre></td></tr></table></figure></p>
+<p>这时我的desktop上面就会出现一个名为XXX的目录了 里面包含了我刚才创建的css文件，html文件和js文件</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/18/git基本操作学习小结/" rel="next" title="git基本操作学习小结">
+                <i class="fa fa-chevron-left"></i> git基本操作学习小结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wang Gong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初学脚本"><span class="nav-number">1.</span> <span class="nav-text">初学脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-找个地方新建文件，后缀随意，一般来说脚本的后缀是-sh。我这里创一个-father的目录在desktop下面"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.找个地方新建文件，后缀随意，一般来说脚本的后缀是 .sh。我这里创一个~/father的目录在desktop下面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进入这个demon的文本文件-然后你可以把它当成一个编辑器来编写一个脚本-当然里面的命令要等到我们都写完才能看到"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.进入这个demon的文本文件 然后你可以把它当成一个编辑器来编写一个脚本(当然里面的命令要等到我们都写完才能看到)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-那么接下来我就要开始运行我的脚本了-脚本是可以在任何位置来运行它的-但是首先你还是要知道它的绝对路径啦ヾ-≧▽≦-o哈哈哈"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.那么接下来我就要开始运行我的脚本了(脚本是可以在任何位置来运行它的 但是首先你还是要知道它的绝对路径啦ヾ(≧▽≦*)o哈哈哈)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-到了这一步恭喜你已经完成了自己的第一个脚本"><span class="nav-number">1.0.4.</span> <span class="nav-text">4.到了这一步恭喜你已经完成了自己的第一个脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">1.0.5.</span> <span class="nav-text">参数</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Gong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
