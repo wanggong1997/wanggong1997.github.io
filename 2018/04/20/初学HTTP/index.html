@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.首先是游览器和服务器的交互过程Server(服务器)+Client(我们电脑上运行的游览器软件)+HTTP(帮助两者进行交互沟通的一种协议)  游览器负责发起请求     服务器在80端口(对应的就是使用HTTP协议的一个端口)接受请求     服务器负责返回内容(响应)     游览器负责下载响应内容   2那什么是请求呢?i.首先我们用curl来创造一个GET请求实例来解释什么是请求。 c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初学HTTP">
+<meta property="og:url" content="http://yoursite.com/2018/04/20/初学HTTP/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="1.首先是游览器和服务器的交互过程Server(服务器)+Client(我们电脑上运行的游览器软件)+HTTP(帮助两者进行交互沟通的一种协议)  游览器负责发起请求     服务器在80端口(对应的就是使用HTTP协议的一个端口)接受请求     服务器负责返回内容(响应)     游览器负责下载响应内容   2那什么是请求呢?i.首先我们用curl来创造一个GET请求实例来解释什么是请求。 c">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-20T03:38:25.679Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初学HTTP">
+<meta name="twitter:description" content="1.首先是游览器和服务器的交互过程Server(服务器)+Client(我们电脑上运行的游览器软件)+HTTP(帮助两者进行交互沟通的一种协议)  游览器负责发起请求     服务器在80端口(对应的就是使用HTTP协议的一个端口)接受请求     服务器负责返回内容(响应)     游览器负责下载响应内容   2那什么是请求呢?i.首先我们用curl来创造一个GET请求实例来解释什么是请求。 c">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/20/初学HTTP/"/>
+
+
+
+
+
+  <title>初学HTTP | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/20/初学HTTP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">初学HTTP</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-20T11:36:02+08:00">
+                2018-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-首先是游览器和服务器的交互过程"><a href="#1-首先是游览器和服务器的交互过程" class="headerlink" title="1.首先是游览器和服务器的交互过程"></a>1.首先是游览器和服务器的交互过程</h1><h1 id="Server-服务器-Client-我们电脑上运行的游览器软件-HTTP-帮助两者进行交互沟通的一种协议"><a href="#Server-服务器-Client-我们电脑上运行的游览器软件-HTTP-帮助两者进行交互沟通的一种协议" class="headerlink" title="Server(服务器)+Client(我们电脑上运行的游览器软件)+HTTP(帮助两者进行交互沟通的一种协议)"></a>Server(服务器)+Client(我们电脑上运行的游览器软件)+HTTP(帮助两者进行交互沟通的一种协议)</h1><blockquote>
+<ul>
+<li>游览器负责发起请求</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>服务器在80端口(对应的就是使用HTTP协议的一个端口)接受请求</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>服务器负责返回内容(响应)</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>游览器负责下载响应内容</li>
+</ul>
+</blockquote>
+<h1 id="2那什么是请求呢"><a href="#2那什么是请求呢" class="headerlink" title="2那什么是请求呢?"></a>2那什么是请求呢?</h1><h2 id="i-首先我们用curl来创造一个GET请求实例来解释什么是请求。"><a href="#i-首先我们用curl来创造一个GET请求实例来解释什么是请求。" class="headerlink" title="i.首先我们用curl来创造一个GET请求实例来解释什么是请求。"></a>i.首先我们用curl来创造一个GET请求实例来解释什么是请求。</h2><blockquote>
+<p>curl -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></p>
+</blockquote>
+<p><strong>请求的内容为:</strong>(“&gt;”大于号后面是我们请求的内容)</p>
+<blockquote>
+<p>“&gt;” GET / HTTP/1.1<br>“&gt;” Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>“&gt;” User-Agent: curl/7.54.0<br>“&gt;” Accept: <em>/</em><br>“&gt;” Frank: xxx</p>
+</blockquote>
+<p><strong>好! 那我们就来解释下上面的这些分别是什么意思<del>~///(^v^)\\</del>~</strong></p>
+<blockquote>
+<p><strong>1.GET /HTTP/1.1</strong><br><strong>这个意思呢就表示我是来获取内容的(GET)；我要获取的路径是”/“（一般是默认根目录）；我用的协议是HTTP(HTTP)；我的HTTP版本是1.1</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>2.Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></strong><br><strong>表示你要访问的站点（告诉服务器要访问的域名）如果你乱给服务器一个不存在的域名这边服务器就会返回给你一个404（表示你Y错了）</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>3.User-Agent: curl/7.54.0</strong><br><strong>表示你使用什么工具来发出这个请求的（我们这里使用curl版本号是7.54.0来发送这个请求的）</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>4. Accept: <em>/</em></strong><br><strong>表示我愿意接受站点返回的任意内容</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Frank:xxx 这边是我随意上传的一个内容可加可不加</strong></p>
+</blockquote>
+<p>##ii 我们再来发送一个POST请求实例</p>
+<blockquote>
+<p><strong>curl -X POST -d “1234567890” -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com&quot;(我这边上传了10个字节的数字1234567890)" target="_blank" rel="noopener">https://www.baidu.com&quot;(我这边上传了10个字节的数字1234567890)</a></strong></p>
+</blockquote>
+<p><strong>请求内容为</strong></p>
+<blockquote>
+<p>POST / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.54.0<br>Accept: <em>/</em><br>Frank: xxx<br>Content-Length: 10<strong>(我上传的长度为10字节)</strong><br>Content-Type: application/x-www-form-urlencoded<strong>(是以什么样的形式响应给你)</strong><br><strong>—-这边是空行—</strong><br>1234567890</p>
+</blockquote>
+<p><strong>请求的格式</strong></p>
+<blockquote>
+<p>1 动词 路径 协议/版本<br>2 Key1: value1<br>2 Key2: value2<br>2 Key3: value3<br>2 Content-Type: application/x-www-form-urlencoded<br>2 Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>2 User-Agent: curl/7.54.0<br>—这里是空行—<br>4 要上传的数据</p>
+</blockquote>
+<p><strong><em>1.请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）<br>2.第三部分永远都是一个回车（\n）<br>3.动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等<br>4.这里的路径包括「查询参数」，但不包括「锚点」<br>5.如果你没有写路径，那么路径默认为 /<br>6.第 2 部分中的 Content-Type 标注了第 4 部分的格式</em></strong></p>
+<p>那么首先我们先来明白这几个单词是什么意思:</p>
+<blockquote>
+<p><strong>GET:表示获取信息</strong><br><strong>POST:表示上传信息</strong><br><strong>PUT:表示整体更新</strong><br><strong>PATCH:表示局部更新</strong><br><strong>DELETE:表示删除</strong></p>
+</blockquote>
+<p>###用 Chrome 发请求：<br>1.打开 Network<br>2.地址栏输入网址<br>3.在 Network 点击，查看 request，点击「view source」<br>3.点击「view source」<br>3.点击「view source」<br>3.点击「view source」<br>4.终于点了？可以看到请求的前三部分了<br>5.如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到</p>
+<h1 id="3-什么是响应？"><a href="#3-什么是响应？" class="headerlink" title="3.什么是响应？"></a>3.什么是响应？</h1><p><strong>请求了之后，应该都能得到一个响应，除非断网了，或者服务器宕机了</strong></p>
+<h2 id="i-GET的响应实例"><a href="#i-GET的响应实例" class="headerlink" title="i.GET的响应实例"></a>i.GET的响应实例</h2><blockquote>
+<p>HTTP/1.1 200 OK<strong>(200”状态码”表示成功)</strong><br>Accept-Ranges: bytes<br>Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform<br>Connection: Keep-Alive<br>Content-Length: 2443<strong>(响应我文本的长度是2443个字节)</strong><br>Content-Type: text/html<strong>(是以html的文本形式响应给我的)</strong><br>Date: Tue, 10 Oct 2017 09:14:05 GMT<strong>(响应的时间)</strong><br>Etag: “5886041d-98b”<br>Last-Modified: Mon, 23 Jan 2017 13:24:45 GMT<br>Pragma: no-cache<br>Server: bfe/1.0.8.18<strong>（给我发出响应的这个服务器）</strong><br>Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/<br>—-这里是空行—<br>&lt;!DOCTYPE html&gt;<br><!--STATUS OK--><html> <head> 后面太长，省略了……<strong>(响应的内容)</strong></head></html></p>
+</blockquote>
+<h2 id="ii-POST响应实例"><a href="#ii-POST响应实例" class="headerlink" title="ii.POST响应实例"></a>ii.POST响应实例</h2><blockquote>
+<p>HTTP/1.1 302 Found<strong>(302”状态码”表示滚吧因为我给百度上传了10个字节的数字但是百度不接受)</strong><br>Connection: Keep-Alive<br>Content-Length: 17931<br>Content-Type: text/html<br>Date: Tue, 10 Oct 2017 09:19:47 GMT<br>Etag: “54d9749e-460b”<br>Server: bfe/1.0.8.18<br>—这里是空行—</p>
+</blockquote>
+<p><html></html></p>
+<p><head></head></p>
+<p><meta http-equiv="content-type" content="text/html;charset=utf-8"> 后面太长，省略了……</p>
+<blockquote>
+<p>1.GET 请求和 POST 请求对应的响应可以一样，也可以不一样<br>2.响应的第四部分可以很长很长很长</p>
+</blockquote>
+<h1 id="4-响应的格式"><a href="#4-响应的格式" class="headerlink" title="4.响应的格式"></a>4.响应的格式</h1><blockquote>
+<p>1 协议/版本号 状态码 状态解释<br>2 Key1: value1<br>2 Key2: value2<br>2 Content-Length: 17931<br>2 Content-Type: text/html<br>3<br>4 要下载的内容</p>
+</blockquote>
+<ul>
+<li>状态码要背，是服务器对浏览器说的话</li>
+<li>1xx 不常用</li>
+<li>2xx 表示成功</li>
+<li>3xx 表示滚吧</li>
+<li>4xx 表示你丫错了</li>
+<li>5xx 表示好吧，我错了</li>
+<li>状态解释没什么用</li>
+<li>第 2 部分中的 Content-Type 标注了第 4 部分的格式</li>
+<li>第 2 部分中的 Content-Type 遵循 MIME 规范</li>
+</ul>
+<h1 id="5-用-Chrome-查看响应"><a href="#5-用-Chrome-查看响应" class="headerlink" title="5.用 Chrome 查看响应"></a>5.用 Chrome 查看响应</h1><p>1.打开 Network<br>2.输入网址<br>3.选中第一个响应<br>4.查看 Response Headers，点击「view source」，点击「view source」，点击「view source」<br>5.你会看到响应的前两部分<br>6.查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/18/初学脚本/" rel="next" title="初学脚本">
+                <i class="fa fa-chevron-left"></i> 初学脚本
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wang Gong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-首先是游览器和服务器的交互过程"><span class="nav-number">1.</span> <span class="nav-text">1.首先是游览器和服务器的交互过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Server-服务器-Client-我们电脑上运行的游览器软件-HTTP-帮助两者进行交互沟通的一种协议"><span class="nav-number">2.</span> <span class="nav-text">Server(服务器)+Client(我们电脑上运行的游览器软件)+HTTP(帮助两者进行交互沟通的一种协议)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2那什么是请求呢"><span class="nav-number">3.</span> <span class="nav-text">2那什么是请求呢?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#i-首先我们用curl来创造一个GET请求实例来解释什么是请求。"><span class="nav-number">3.1.</span> <span class="nav-text">i.首先我们用curl来创造一个GET请求实例来解释什么是请求。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-什么是响应？"><span class="nav-number">4.</span> <span class="nav-text">3.什么是响应？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#i-GET的响应实例"><span class="nav-number">4.1.</span> <span class="nav-text">i.GET的响应实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ii-POST响应实例"><span class="nav-number">4.2.</span> <span class="nav-text">ii.POST响应实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-响应的格式"><span class="nav-number">5.</span> <span class="nav-text">4.响应的格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-用-Chrome-查看响应"><span class="nav-number">6.</span> <span class="nav-text">5.用 Chrome 查看响应</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Gong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
