@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="title: 初学htmldate: 2018-04-25 20:30:03tags: 1，认识HTML HTML的全称为(Hypertext Markup Language)即超文本标记语言HTML的规范是由W3C规定的(W3C的创始人是Sir Timothy John Berners-Lee “李爵士”)  2，HTML的一些常用标签12345678910111213141516171819">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBlog">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/初学html/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="title: 初学htmldate: 2018-04-25 20:30:03tags: 1，认识HTML HTML的全称为(Hypertext Markup Language)即超文本标记语言HTML的规范是由W3C规定的(W3C的创始人是Sir Timothy John Berners-Lee “李爵士”)  2，HTML的一些常用标签12345678910111213141516171819">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-25T12:34:53.147Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MyBlog">
+<meta name="twitter:description" content="title: 初学htmldate: 2018-04-25 20:30:03tags: 1，认识HTML HTML的全称为(Hypertext Markup Language)即超文本标记语言HTML的规范是由W3C规定的(W3C的创始人是Sir Timothy John Berners-Lee “李爵士”)  2，HTML的一些常用标签12345678910111213141516171819">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/25/初学html/"/>
+
+
+
+
+
+  <title> | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/初学html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-25T20:30:03+08:00">
+                2018-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>title: 初学html<br>date: 2018-04-25 20:30:03<br>tags:</p>
+<h1 id="1，认识HTML"><a href="#1，认识HTML" class="headerlink" title="1，认识HTML"></a>1，认识HTML</h1><blockquote>
+<p>HTML的全称为(Hypertext Markup Language)即超文本标记语言<br>HTML的规范是由W3C规定的(W3C的创始人是Sir Timothy John Berners-Lee “李爵士”)</p>
+</blockquote>
+<h1 id="2，HTML的一些常用标签"><a href="#2，HTML的一些常用标签" class="headerlink" title="2，HTML的一些常用标签"></a>2，HTML的一些常用标签</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">HTML标签           英文释义            中文释义</span><br><span class="line">&lt;a&gt;               Anchor                锚点</span><br><span class="line">&lt;code&gt;             code                源代码 </span><br><span class="line">&lt;kbd&gt;            keyboard               键盘</span><br><span class="line">&lt;samp&gt;            sample                示例</span><br><span class="line">&lt;cite&gt;           citation               引用</span><br><span class="line">&lt;var&gt;            variable               变量</span><br><span class="line">&lt;tt&gt;             teletype             打印机（文本）</span><br><span class="line">&lt;q&gt;              Quotation             引用语 </span><br><span class="line">&lt;strong&gt;          strong               字体加重</span><br><span class="line">&lt;b&gt;                Bold                 粗体</span><br><span class="line">&lt;i&gt;               Italic              斜体（文本）</span><br><span class="line">&lt;big&gt;               Big               变大（文本）</span><br><span class="line">&lt;small&gt;            Small              变小（文本）</span><br><span class="line">&lt;bdo&gt;     Direction of Text Display   文本显示方向</span><br><span class="line">&lt;br&gt;               Break                换行</span><br><span class="line">&lt;center&gt;          Centered            居中（文本）</span><br><span class="line">&lt;font&gt;             Font                 字体</span><br><span class="line">&lt;u&gt;             Underlined           下划线（文本）</span><br><span class="line">&lt;div&gt;             Division              分隔</span><br><span class="line">&lt;span&gt;             Span                 范围</span><br><span class="line">&lt;ol&gt;            Ordered List          有序列表</span><br><span class="line">&lt;ul&gt;           Unordered List         无序列表</span><br><span class="line">&lt;li&gt;              List Item           列表项目</span><br><span class="line">&lt;dl&gt;           Definition List        定义列表 </span><br><span class="line">&lt;dt&gt;           Definition Term        定义术语 </span><br><span class="line">&lt;dd &gt;         Definition Description  定义描述 </span><br><span class="line">&lt;del&gt;             Deleted            删除（的文本） </span><br><span class="line">&lt;ins&gt;            Inserted            插入（的文本） </span><br><span class="line">&lt;h1~h6&gt;      Header 1 to Header 6    标题1到标题6 </span><br><span class="line">&lt;p&gt;              Paragraph              段落 </span><br><span class="line">&lt;hr&gt;           Horizontal Rule         水平尺 </span><br><span class="line">&lt;href &gt;      hypertext reference      超文本引用</span><br><span class="line">&lt;alt&gt;              alter      替用(一般是图片显示不出的提示)</span><br><span class="line">&lt;src&gt;             Source              源文件链接</span><br><span class="line">&lt;nav&gt;        navigation lists         导航列表</span><br><span class="line">&lt;tr&gt;             table row          表格中的一行</span><br><span class="line">&lt;th&gt;        table header cell       表格中的表头</span><br><span class="line">&lt;td&gt;        table data cell      表格中的一个单元格</span><br></pre></td></tr></table></figure>
+<h1 id="3空标签"><a href="#3空标签" class="headerlink" title="3空标签"></a>3空标签</h1><blockquote>
+<p>没有闭合的标签称为空标签，如：<br>和<img>等。他们不存在成对的情况,反之具有成对性质的例如：<div></div>、<form></form>就不是空标签。<br>在HTML中，在空标签上使用闭标签是无效的，例如：<br><br>。这样的情况是无效的HTML。</p>
+</blockquote>
+<h3 id="常见的空标签如下："><a href="#常见的空标签如下：" class="headerlink" title="常见的空标签如下："></a>常见的空标签如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;area&gt;</span><br><span class="line">&lt;base&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;col&gt;</span><br><span class="line">&lt;colgroup&gt; when the span is present</span><br><span class="line">&lt;command&gt;</span><br><span class="line">&lt;embed&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;img&gt;</span><br><span class="line">&lt;input&gt;</span><br><span class="line">&lt;keygen&gt;</span><br><span class="line">&lt;link&gt;</span><br><span class="line">&lt;meta&gt;</span><br><span class="line">&lt;param&gt;</span><br><span class="line">&lt;source&gt;</span><br><span class="line">&lt;track&gt;</span><br><span class="line">&lt;wbr&gt;</span><br></pre></td></tr></table></figure>
+<p>、</p>
+<h1 id="4-可替换标签"><a href="#4-可替换标签" class="headerlink" title="4.可替换标签"></a>4.可替换标签</h1><blockquote>
+<p>在CSS里，可替换元素(replaced element)的展现不是由CSS来控制的。这些元素是一类外观渲染独立于CSS的外部对象。典型的可替换元素有<img>、<object>、<video>和表单元素，如<textarea>、</textarea><input>。某些元素只在一些特殊情况下表现为可替换元素，例如<audio>和<canvas>。通过CSS的content属性来插入的对象被称为匿名可替换对象(annoymous replaced elements)。</canvas></audio></video></object></p>
+</blockquote>
+<h1 id="5-W3C-简介"><a href="#5-W3C-简介" class="headerlink" title="5.W3C 简介"></a>5.W3C 简介</h1><blockquote>
+<p>万维网联盟（W3C）由<a href="https://zh.wikipedia.org/wiki/%E6%8F%90%E5%A7%86%C2%B7%E6%9F%8F%E5%85%A7%E8%8C%B2-%E6%9D%8E" title="蒂姆·伯纳斯-李" target="_blank" rel="noopener">蒂姆·伯纳斯-李</a>于1994年10月离开<a href="https://zh.wikipedia.org/wiki/%E6%AD%90%E6%B4%B2%E6%A0%B8%E5%AD%90%E7%A0%94%E7%A9%B6%E7%B5%84%E7%B9%94" title="欧洲核子研究中心" target="_blank" rel="noopener">欧洲核子研究中心</a>（CERN）后成立，在<a href="https://zh.wikipedia.org/wiki/%E6%AD%90%E7%9B%9F%E5%9F%B7%E5%A7%94%E6%9C%83" title="欧盟执委会" target="_blank" rel="noopener">欧盟执委会</a>和<a href="https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%98%B2%E9%AB%98%E7%AD%89%E7%A0%94%E7%A9%B6%E8%A8%88%E5%8A%83%E7%BD%B2" title="国防高等研究计划署" target="_blank" rel="noopener">国防高等研究计划署</a>（DARPA）的支持下成立于<a href="https://zh.wikipedia.org/wiki/%E9%BA%BB%E7%9C%81%E7%90%86%E5%B7%A5%E5%AD%B8%E9%99%A2" title="麻省理工学院" target="_blank" rel="noopener">麻省理工学院</a><a href="https://zh.wikipedia.org/wiki/MIT%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E9%A9%97%E5%AE%A4" title="MIT计算机科学与人工智能实验室" target="_blank" rel="noopener">MIT计算机科学与人工智能实验室</a>（MIT／LCS）<sup><a href="https://zh.wikipedia.org/wiki/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F#cite_note-consortium-2" target="_blank" rel="noopener">[2]</a></sup>，DARPA曾率先推出了<a href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%AF%E7%B6%B2" title="互联网" target="_blank" rel="noopener">互联网</a>及其前身<a href="https://zh.wikipedia.org/wiki/ARPANET" title="ARPANET" target="_blank" rel="noopener">ARPANET</a>。</p>
+</blockquote>
+<p>该组织试图通过W3C制定的新标准来促进业界成员间的兼容性和协议。不兼容的HTML版本由不同的供应商提供，导致网页显示方式不一致。联盟试图让所有的供应商实施一套由联盟选择的核心原则和组件。</p>
+<h1 id="6-MDN简介"><a href="#6-MDN简介" class="headerlink" title="6.MDN简介"></a>6.MDN简介</h1><blockquote>
+<p><strong>MDN Web Docs</strong>（旧称Mozilla Developer Network、Mozilla Developer Center，简称MDN）是一个汇集众多<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E6%9C%83" title="Mozilla基金会" target="_blank" rel="noopener">Mozilla基金会</a>产品和网络技术开发文档的免费网站<sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-1" target="_blank" rel="noopener">[1]</a></sup>。</p>
+</blockquote>
+<h2 id="历史-编辑"><a href="#历史-编辑" class="headerlink" title="历史[编辑]"></a>历史[<a href="https://zh.wikipedia.org/w/index.php?title=MDN_Web_Docs&amp;action=edit&amp;section=1" title="编辑小节：历史" target="_blank" rel="noopener">编辑</a>]</h2><p>该项目始于2005年，最初由Mozilla公司员工Deb Richardson领导。自2006年以来，文档工作由Eric Shepherd领导<sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-MitchellBlog-2" target="_blank" rel="noopener">[2]</a></sup>。</p>
+<p>网站最初的内容是由<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF#%E8%A7%A3%E6%95%A3" title="网景" target="_blank" rel="noopener">DevEdge</a>提供，但在<a href="https://zh.wikipedia.org/wiki/AOL" title="AOL" target="_blank" rel="noopener">AOL</a>收购Netscape后，DevEdge网站也宣布关闭。为此Mozilla基金会向AOL获取了DevEdge发布的内容<sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-3" target="_blank" rel="noopener">[3]</a></sup><sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-MitchellBlog-2" target="_blank" rel="noopener">[2]</a></sup>，同时将DevEdge内容搬移到mozilla.org<sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-4" target="_blank" rel="noopener">[4]</a></sup><sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-DriaDevedge-temp-5" target="_blank" rel="noopener">[5]</a></sup>。</p>
+<p>MDN本身有一个论坛，并在Mozilla IRC网络上有一个<a href="https://zh.wikipedia.org/wiki/IRC" title="IRC" target="_blank" rel="noopener">IRC</a>频道#mdn。MDN由<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%85%AC%E5%8F%B8" title="Mozilla公司" target="_blank" rel="noopener">Mozilla公司</a>提供服务器和员工的资助。</p>
+<p>2016年10月3日发表的<a href="https://zh.wikipedia.org/wiki/Brave_(%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8" target="_blank" rel="noopener">Brave</a> “Brave (网页浏览器)”)网页浏览器将MDN作为其<a href="https://zh.wikipedia.org/wiki/%E6%90%9C%E5%B0%8B%E5%BC%95%E6%93%8E" title="搜索引擎" target="_blank" rel="noopener">搜索引擎</a>选项之一<sup><a href="https://zh.wikipedia.org/wiki/MDN_Web_Docs#cite_note-6" target="_blank" rel="noopener">[6]</a></sup>。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/20/初学HTTP/" rel="next" title="初学HTTP">
+                <i class="fa fa-chevron-left"></i> 初学HTTP
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wang Gong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1，认识HTML"><span class="nav-number">1.</span> <span class="nav-text">1，认识HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2，HTML的一些常用标签"><span class="nav-number">2.</span> <span class="nav-text">2，HTML的一些常用标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3空标签"><span class="nav-number">3.</span> <span class="nav-text">3空标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的空标签如下："><span class="nav-number">3.0.1.</span> <span class="nav-text">常见的空标签如下：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-可替换标签"><span class="nav-number">4.</span> <span class="nav-text">4.可替换标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-W3C-简介"><span class="nav-number">5.</span> <span class="nav-text">5.W3C 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-MDN简介"><span class="nav-number">6.</span> <span class="nav-text">6.MDN简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#历史-编辑"><span class="nav-number">6.1.</span> <span class="nav-text">历史[编辑]</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Gong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
