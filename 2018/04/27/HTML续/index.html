@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="今天主要学习了一下几种标签的用法和区别:1234&amp;lt;iframe&amp;gt;&amp;lt;a&amp;gt;&amp;lt;form&amp;gt;&amp;lt;input&amp;gt; 等等我好像忘记了一些很重要的事情! 什么是HTML的标签?什么是HTML的元素?什么是HTML的属性?这些我想肯定很重要! 标签; 标签就是&amp;lt;head&amp;gt;、&amp;lt;body&amp;gt;、&amp;lt;table&amp;gt;等被尖括号“&amp;lt;”和“&amp;gt;”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML续">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/HTML续/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="今天主要学习了一下几种标签的用法和区别:1234&amp;lt;iframe&amp;gt;&amp;lt;a&amp;gt;&amp;lt;form&amp;gt;&amp;lt;input&amp;gt; 等等我好像忘记了一些很重要的事情! 什么是HTML的标签?什么是HTML的元素?什么是HTML的属性?这些我想肯定很重要! 标签; 标签就是&amp;lt;head&amp;gt;、&amp;lt;body&amp;gt;、&amp;lt;table&amp;gt;等被尖括号“&amp;lt;”和“&amp;gt;”">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-27T13:47:38.608Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML续">
+<meta name="twitter:description" content="今天主要学习了一下几种标签的用法和区别:1234&amp;lt;iframe&amp;gt;&amp;lt;a&amp;gt;&amp;lt;form&amp;gt;&amp;lt;input&amp;gt; 等等我好像忘记了一些很重要的事情! 什么是HTML的标签?什么是HTML的元素?什么是HTML的属性?这些我想肯定很重要! 标签; 标签就是&amp;lt;head&amp;gt;、&amp;lt;body&amp;gt;、&amp;lt;table&amp;gt;等被尖括号“&amp;lt;”和“&amp;gt;”">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/27/HTML续/"/>
+
+
+
+
+
+  <title>HTML续 | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/HTML续/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML续</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T21:43:41+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="今天主要学习了一下几种标签的用法和区别"><a href="#今天主要学习了一下几种标签的用法和区别" class="headerlink" title="今天主要学习了一下几种标签的用法和区别:"></a>今天主要学习了一下几种标签的用法和区别:</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe&gt;</span><br><span class="line">&lt;a&gt;</span><br><span class="line">&lt;form&gt;</span><br><span class="line">&lt;input&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="等等我好像忘记了一些很重要的事情-什么是HTML的标签-什么是HTML的元素-什么是HTML的属性-这些我想肯定很重要"><a href="#等等我好像忘记了一些很重要的事情-什么是HTML的标签-什么是HTML的元素-什么是HTML的属性-这些我想肯定很重要" class="headerlink" title="等等我好像忘记了一些很重要的事情! 什么是HTML的标签?什么是HTML的元素?什么是HTML的属性?这些我想肯定很重要!"></a><em>等等我好像忘记了一些很重要的事情! 什么是HTML的标签?什么是HTML的元素?什么是HTML的属性?这些我想肯定很重要!</em></h1><ul>
+<li><h2 id="标签"><a href="#标签" class="headerlink" title="标签;"></a>标签;</h2><blockquote>
+<p>标签就是<code>&lt;head&gt;、&lt;body&gt;、&lt;table&gt;</code>等被尖括号“&lt;”和“&gt;”包起来的对象，绝大部分的标签都是成对出现的，如<code>&lt;table&gt;&lt;/talbe&gt;、&lt;form&gt;&lt;/form&gt;</code>。当然还有少部分不是成对出现的，如<code>&lt;br&gt;&lt;hr&gt;</code>等。标签就是用来标记HTML元素的。位于起始标签和结束标签之间的文本就是HTML元素的内容。</p>
+</blockquote>
+<ul>
+<li><h2 id="元素"><a href="#元素" class="headerlink" title="元素:"></a>元素:</h2><blockquote>
+<p>HTML网页实际上就是由许许多多各种各样的HTML元素构成的文本文件，并且任何网页浏览器都可以直接运行HTML文件。所以可以这样说，HTML元素就是构成HTML文件的基本对象，HTML元素可以说是一个统称而已。HTML元素就是通过使用HTML标签进行定义的。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><h2 id="属性"><a href="#属性" class="headerlink" title="属性:"></a>属性:</h2><blockquote>
+<p>为HTML元素提供各种附加信息的就是HTML属性，它总是以”属性名=属性值”这种名值对的形式出现，而且属性总是在HTML元素的开始标签中进行定义。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt; </span><br><span class="line">     &lt;head&gt; &lt;title&gt;示例标题&lt;/title&gt; &lt;/head&gt; </span><br><span class="line">     &lt;body bgcolor=&quot;red&quot;&gt; </span><br><span class="line">             &lt;p&gt;这是示例页面&lt;/p&gt; </span><br><span class="line">     &lt;/body&gt; </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>在这个示例中，<p>这是示例页面</p>就是HTML元素，其中“这是示例页面”就是元素的具体内容了。<code>&lt;head&gt;&lt;title&gt;&lt;body&gt;</code>等就是HTML标签，这是标签构成了HTML元素。<code>&lt;bodybgcolor=&quot;red&quot;&gt;</code>中的<em>bgcolor=”red”</em>就是标签的属性，它定义了标签应该如何具体配置。<br>总之，元素和标签的区别也不必太在意，实际工作中我们都直接以标签统称。而属性就很容易明白了，它就是为HTML标签添加各种附加信息或者配置选项的参数。</strong></p>
+</blockquote>
+<h1 id="1-首先我们先来认识第一个标签"><a href="#1-首先我们先来认识第一个标签" class="headerlink" title="1.首先我们先来认识第一个标签"></a>1.首先我们先来认识第一个标签<iframe></iframe></h1><ul>
+<li><em><code>&lt;iframe&gt;</code></em> 表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。</li>
+<li><em><code>&lt;iframe&gt;</code></em>可以在正常的文档主体中使用。每个浏览上下文都有自己的会话历史记录和活动文档。包含嵌入内容的浏览上下文称为父浏览上下文。顶级浏览上下文（没有父级）通常是浏览器窗口。</li>
+<li><code>&lt;iframe&gt;</code>通常跟<a>一起用，当然这里常常用”name”的属性来把它们结合一起用，例如:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe name=&quot;XXX&quot; src=&quot;#&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a herf=&quot;#&quot; target=&quot;XXX&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</a></li>
+</ul>
+<p><strong>“name”:嵌入的浏览上下文（框架）的名称。该名称可以用作<code>&lt;a&gt;</code>标签，<code>&lt;form&gt;</code>标签的target属性值，或<code>&lt;input&gt;</code>标签和<code>&lt;button&gt;</code>标签和<code>&lt;button&gt;</code>标签的formtaget属性值</strong></p>
+<p><strong>“src”:嵌套页面的URL地址。使用遵守同源策略的来嵌套空白页。</strong></p>
+<h1 id="2-然后是标签"><a href="#2-然后是标签" class="headerlink" title="2.然后是标签"></a>2.然后是<a>标签</a></h1><ul>
+<li><p><code>download</code>属性:<strong>此属性指示浏览器下载URL而不是导航到URL，因此将提示用户将其保存为本地文件.</strong></p>
+</li>
+<li><p><code>herf</code>属性:<strong>这是一个必需属性为锚定义一个超文本链接来源。这表示链接目标的URL或URL片段。URL片段是由一个hash符号（＃），它指定一个内部目标在当前文档中的位置（<a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes#attr-id" title="全局属性＃ATTR-ID" target="_blank" rel="noopener">ID</a>）开头的名字。URL不限于网页（HTTP）的文件。URL可能使用浏览器所支持的任何协议。例如，文件，FTP，大多数用户代理mailto工作。</strong></p>
+<blockquote>
+<p><strong>(注意: 可以使用 href=”#top” 或者 href=”#” 链接返回到页面顶部。)</strong></p>
+</blockquote>
+</li>
+<li><p><code>target</code><strong>该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。以下是集中特殊关键字的含义:</strong></p>
+<blockquote>
+<p>当<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;当`tage=&quot;_blank&quot;时`:**新窗口打开，即到一个新的未命名的HTML4窗口或HTML5浏览器上下文**</span><br><span class="line"></span><br><span class="line">&gt;当`tage=&quot;_parent&quot;时`:**加载响应到当前框架的HTML4父框架或当前的HTML5浏览上下文的父浏览上下文。如果没有parent框架或者浏览上下文，此选项的行为方式相同_self。**</span><br><span class="line"></span><br><span class="line">&gt;当`tage=&quot;_top&quot;时`:**IHTML4中：加载的响应成完整的，原来的窗口，取消所有其它frame。 HTML5中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有parent）。如果没有parent框架或者浏览上下文，此选项的行为方式相同_self**</span><br><span class="line"></span><br><span class="line">###注意：使用target时，考虑添加 rel=&quot;noopener norefferrer&quot; 以防止针对 window.opener API 的恶意行为。</span><br><span class="line"></span><br><span class="line"># 3.接下来是&lt;form&gt;标签:</span><br><span class="line"></span><br><span class="line">- **HTML `&lt;form&gt;` 元素 表示了文档中的一个区域，这个区域包含有交互控制元件，用来向web服务器提交信息。** </span><br><span class="line"></span><br><span class="line">- **`action`属性**: **一个处理这个form信息的程序所在的URL。这个值可以被 [`&lt;button&gt;`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button &quot;HTML &lt;button&gt;元素 表示一个可点击的按钮。能够在表单，或者 HTML 文档的任一需要按钮的位置。默认情况下 HTML 按钮会呈现与用户主机相似的样式，基于 user agent。&quot;) 或者 [`&lt;input&gt;`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input &quot;HTML &lt;input&gt; 元素用于为基于Web的表单创建交互式控件，以便接受来自用户的数据。&quot;) 元素中的 `` 属性重载（覆盖）。(为`&lt;form&gt;`元素提供一个提交对象的作用)**</span><br><span class="line"></span><br><span class="line">- **`methon`属性**: **浏览器使用这种HTTP方式来提交 form. 可能的值有:**</span><br><span class="line">&gt;当`methon=&quot;post&quot;`时:表单数据会包含在表单体内然后发送给服务器.</span><br><span class="line">当`methon=&quot;get&quot;`时:表单数据会附加在 action 属性的URI中，并以 &apos;?&apos; 作为分隔符, 然后这样得到的 URI 再发送给服务器. 当这样做（数据暴露在URI里面）没什么副作用，或者表单仅包含ASCII字符时，再使用这种方法吧。</span><br><span class="line"></span><br><span class="line">### 举例:</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</li>
+</ul>
+<!-- 一个简单的表单，这个表单会发送一个 GET 请求 -->
+<form action=""><br>  <label for="GET-name">Name:</label><br>  <input id="GET-name" type="text" name="name"><br>  <input type="submit" value="Save"><br></form>
+
+<!-- 一个简单的表单，发送 POST 请求 -->
+<form action="" method="post"><br>  <label for="POST-name">Name:</label><br>  <input id="POST-name" type="text" name="name"><br>  <input type="submit" value="Save"><br></form>
+
+<!-- 使用 fieldset, legend, and label 的表单 -->
+<form action="" method="post"><br>  <fieldset><br>    <legend>Title</legend><br>    <input type="radio" name="radio" id="radio"> <label for="radio">Click me</label><br>  </fieldset><br></form><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 4.然后是&lt;input&gt;标签:</span><br><span class="line"></span><br><span class="line">- **HTML &lt;input&gt; 元素用于为基于Web的表单创建交互式控件，以便接受来自用户的数据。**</span><br><span class="line"></span><br><span class="line">- **为了对每种类型的&lt;input&gt;表单的外形有个总体的印象，试着编辑下面示例中的type 属性值。你将看到你所输入的类型。最初的text值会产生一个基本的文本输入框，但你可以试着输入其他值，如number, color, checkbox, radio, date, file, month, password, range 和 time.**</span><br><span class="line"></span><br><span class="line">### 举例:</span><br></pre></td></tr></table></figure><br><br><input id="input1" type="text"><br><input id="input2" type="text"><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- **`&lt;type&gt;`控件类型的显示。如果这个属性没有指定，默认的类型是 text。可用的值包括：**</span><br><span class="line"></span><br><span class="line">&gt;*   `button`：无缺省行为按钮。</span><br><span class="line">&gt;*   `checkbox`： 复选框。必须使用 **value** 属性定义此控件被提交时的值。使用 **checked**属性指示控件是否被选择。也可以使用 **indeterminate** 指示复选框在一种不确定状态（大多数平台上，显示为一条穿过复选框的水平线）。</span><br><span class="line">&gt;*   `color`：用于指定颜色的控件。</span><br><span class="line">&gt;*   `date：` 用于输入日期的控件（年，月，日，不包括时间）。</span><br><span class="line">&gt;*   `datetime`： 基于 UTC 时区的日期时间输入控件（时，分，秒及几分之一秒）。</span><br><span class="line">&gt;*   `datetime-local`： 用于输入日期时间控件，不包含时区。</span><br><span class="line">&gt;*   `file`：此控件可以让用户选择文件。使用 **accept** 属性可以定义控件可以选择的文件类型。</span><br><span class="line">&gt;*   `hidden`：不显示在页面上的控件，但它的值会被提交到服务器。</span><br><span class="line">&gt;*   `image`：图片提交按钮。必须使用 **src** 属性定义图片的来源及使用 **alt** 定义替代文本。还可以使用 **height** 和 **width** 属性以像素为单位定义图片的大小。</span><br><span class="line">&gt;*   `month`： 用于输入年月的控件，不带时区。</span><br><span class="line">&gt;*   `number`:用于输入浮点数的控件。</span><br><span class="line">&gt;*   `password`：一个值被遮盖的单行文本字段。使用 **maxlength** 指定可以输入的值的最大长度 。</span><br><span class="line">&gt;*   `radio`：单选按钮。必须使用 **value** 属性定义此控件被提交时的值。使用**checked** 必须指示控件是否缺省被选择。在同一个”单选按钮组“中，所有单选按钮的 **name** 属性使用同一个值； 一个单选按钮组中是，同一时间只有一个单选按钮可以被选择。</span><br><span class="line">&gt;*   `range`： 用于输入不精确值控件。如果未指定相应的属性，控件使用如下缺省值：</span><br><span class="line">   &gt; *   `min`：0</span><br><span class="line">   &gt; *   `max`：100</span><br><span class="line">   &gt; *   `value`：`min` + (`max`-`min`)/2，或当 `max` 小于 `min 时使用` `min`</span><br><span class="line">   &gt; *   `step`：1</span><br><span class="line">&gt;*   `reset`：用于将表单所内容设置为缺省值的按钮。</span><br><span class="line">&gt;*   `search`用于输入搜索字符串的单行文本字段。换行会被从输入的值中自动移除。</span><br><span class="line">&gt;*   `submit`：用于提交表单的按钮。</span><br><span class="line">&gt;*   `text`：单行字段；换行会将自动从输入的值中移除。</span><br><span class="line">&gt;*   `time`： 用于输入不含时区的时间控件。</span><br><span class="line">&gt;*   `url`： 用于编辑URL的字段。 The user may enter a blank or invalid address. 换行会被自动从输入值中移队。可以使用如：</span><br><span class="line">&gt;*   `week`：用于输入一个由星期-年组成的日期，日期不包括时区。</span><br><span class="line"></span><br><span class="line">### 例子</span><br><span class="line">&gt;一个简单的文本输入框</span><br><span class="line">&lt;!-- 一个基本的文本输入框 --&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;input&quot; value=&quot;Type here&quot;&gt;</span><br><span class="line"></span><br><span class="line">### 一个常见的表单用例</span><br><span class="line">&gt; 一个常见的表单,包含了一些input元素</span><br></pre></td></tr></table></figure><br><br><form action="getform.php" method="get"><br>    First name: <input type="text" name="first_name"><br><br>     Last name: <input type="text" name="last_name"><br><br>        E-mail: <input type="email" name="user_email"><br><br><input type="submit" value="Submit"><br></form>
+
+<p><code>`</code></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/25/初学html/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wang Gong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#今天主要学习了一下几种标签的用法和区别"><span class="nav-number">1.</span> <span class="nav-text">今天主要学习了一下几种标签的用法和区别:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#等等我好像忘记了一些很重要的事情-什么是HTML的标签-什么是HTML的元素-什么是HTML的属性-这些我想肯定很重要"><span class="nav-number">2.</span> <span class="nav-text">等等我好像忘记了一些很重要的事情! 什么是HTML的标签?什么是HTML的元素?什么是HTML的属性?这些我想肯定很重要!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标签"><span class="nav-number">2.1.</span> <span class="nav-text">标签;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素"><span class="nav-number">2.2.</span> <span class="nav-text">元素:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.3.</span> <span class="nav-text">属性:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">2.4.</span> <span class="nav-text">示例:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-首先我们先来认识第一个标签"><span class="nav-number">3.</span> <span class="nav-text">1.首先我们先来认识第一个标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-然后是标签"><span class="nav-number">4.</span> <span class="nav-text">2.然后是标签</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Gong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
