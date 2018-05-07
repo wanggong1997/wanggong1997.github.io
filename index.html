@@ -229,6 +229,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/初学css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/07/初学css/" itemprop="url">初学css</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T15:41:39+08:00">
+                2018-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS是-Cascading-Style-Sheet-的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。"><a href="#CSS是-Cascading-Style-Sheet-的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。" class="headerlink" title="CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。"></a>CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。</h1><h1 id="1-如何让CSS和html5有关联呢"><a href="#1-如何让CSS和html5有关联呢" class="headerlink" title="1.如何让CSS和html5有关联呢/"></a>1.如何让CSS和html5有关联呢/</h1><blockquote>
+<p>引入外部css样式单文件，在html5的<code>&lt;head.../&gt;</code>元素内插入<code>&lt;link.../&gt;</code>子元素:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">     &lt;link herf=&quot;out.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">```  </span><br><span class="line">**直接在html5里面增加css样式采用的方法是直接在需要添加样式的标签上写`style=&quot;需要添加的样式属性&quot;`**</span><br><span class="line"></span><br><span class="line"># 2.如何在外部css样式单文件准确定位到需要添加样式的标签上呢?</span><br><span class="line"></span><br><span class="line">## 用css选择器来准确定位 那么css的选择器有哪些呢?有很多，那么下面我给大家一一介绍一下:</span><br><span class="line"></span><br><span class="line">### 1.[元素选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Type_selectors)</span><br><span class="line">### 2.[属性选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors)</span><br><span class="line">### 3.[id选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/ID_selectors)</span><br><span class="line">### 4.[类选择器](http://www.w3school.com.cn/cssref/selector_class.asp)</span><br><span class="line">### 5.[子选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_selectors)</span><br><span class="line">### 6.[后代选择器](http://www.w3school.com.cn/css/css_selector_descendant.asp)</span><br><span class="line"></span><br><span class="line"># 3.css的几种引入方式&#123;1.内联style属性 &#125; &#123;2.style标签&#125; &#123;3.外部文件css link&#125;</span><br><span class="line"></span><br><span class="line"># 4.学习css的几种资源:</span><br><span class="line">### 一.google关键词:MND</span><br><span class="line">### 二.CSS Tricks</span><br><span class="line">### 三.阮一峰 css</span><br><span class="line">### 四.张鑫旭的240多篇css博客</span><br><span class="line">### 五.Codrops 酷炫css效果</span><br><span class="line">### 六. css揭秘(推荐购买书籍)</span><br><span class="line">### 七.css 2.1中文spec (最权威的书其实就是文档)</span><br><span class="line"></span><br><span class="line">#4 针对`style=&quot;float:left&quot;`的bug的修复:</span><br></pre></td></tr></table></figure>
+<p>clearfix::after{<br>      content: ‘’;<br>      display:block;<br>      clear:both;<br>}<br><code>`</code></p>
+<blockquote>
+<p>注意添加<code>float:left</code>的子元素 其直属母元素上一定要加<code>clearfix</code></p>
+</blockquote>
+<h1 id="5-当你不知道自己-lt-div-gt-里面框的是什么的时候你可以在这个div里面加一个style-quot-border-1px-solid-red-quot-这个属性会让你直接看到div的框架。"><a href="#5-当你不知道自己-lt-div-gt-里面框的是什么的时候你可以在这个div里面加一个style-quot-border-1px-solid-red-quot-这个属性会让你直接看到div的框架。" class="headerlink" title="5.当你不知道自己&lt;div&gt;里面框的是什么的时候你可以在这个div里面加一个style=&quot;border:1px solid red&quot;这个属性会让你直接看到div的框架。"></a>5.当你不知道自己<code>&lt;div&gt;</code>里面框的是什么的时候你可以在这个div里面加一个<code>style=&quot;border:1px solid red&quot;</code>这个属性会让你直接看到<code>div</code>的框架。</h1><h1 id="6-我学习css中所用到的属性及其含义"><a href="#6-我学习css中所用到的属性及其含义" class="headerlink" title="6 我学习css中所用到的属性及其含义:"></a>6 我学习css中所用到的属性及其含义:</h1><blockquote>
+<p><code>padding:20px 0px 20px 0px</code>(padding是内边距 后面的数字意思分别是 上 右 下 左)</p>
+</blockquote>
+<blockquote>
+<p><code>margin</code>外边距 用法跟padding一样也是后面加所需要的数字</p>
+</blockquote>
+<blockquote>
+<p><code>text-decoration:none</code>(这个是样式 默认的样式是有下划线<code>underline</code>的 这个呢就是帮助你去掉下划线 也还有<code>overline</code>上划线等等)</p>
+</blockquote>
+<blockquote>
+<p><code>text-align:center</code>(文字居中的意思)</p>
+</blockquote>
+<blockquote>
+<p><code>font-weight:bold</code>(字体加粗)</p>
+</blockquote>
+<blockquote>
+<p><code>font-family:字体样式</code>(意思的选择你想要的字体样式)</p>
+</blockquote>
+<blockquote>
+<p><code>font-size</code>(字体大小tiaojie)</p>
+</blockquote>
+<blockquote>
+<p><code>display-block</code>(脱离文档流)</p>
+</blockquote>
+<blockquote>
+<p><code>background-position:center center</code>(背景图片居中)</p>
+</blockquote>
+<blockquote>
+<p><code>background-size:cover</code>(背景图片按比例缩放)</p>
+</blockquote>
+<blockquote>
+<p><code>mix-weight:100px</code>(最大宽度不超过100px)</p>
+</blockquote>
+<blockquote>
+<p><code>margin-left:auto ; margin-right:auto;</code>(可以实现水平居中)</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/HTML续/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1585,7 +1748,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

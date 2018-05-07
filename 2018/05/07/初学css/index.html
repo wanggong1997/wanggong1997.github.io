@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。1.如何让CSS和html5有关联呢/ 引入外部css样式单文件，在html5的&amp;lt;head.../&amp;gt;元素内插入&amp;lt;link.../&amp;gt;子元素:  12345678910111213141516171819202122232425262">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初学css">
+<meta property="og:url" content="http://yoursite.com/2018/05/07/初学css/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。1.如何让CSS和html5有关联呢/ 引入外部css样式单文件，在html5的&amp;lt;head.../&amp;gt;元素内插入&amp;lt;link.../&amp;gt;子元素:  12345678910111213141516171819202122232425262">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-07T07:42:37.288Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初学css">
+<meta name="twitter:description" content="CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。1.如何让CSS和html5有关联呢/ 引入外部css样式单文件，在html5的&amp;lt;head.../&amp;gt;元素内插入&amp;lt;link.../&amp;gt;子元素:  12345678910111213141516171819202122232425262">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/07/初学css/"/>
+
+
+
+
+
+  <title>初学css | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/初学css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">初学css</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T15:41:39+08:00">
+                2018-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS是-Cascading-Style-Sheet-的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。"><a href="#CSS是-Cascading-Style-Sheet-的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。" class="headerlink" title="CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。"></a>CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。</h1><h1 id="1-如何让CSS和html5有关联呢"><a href="#1-如何让CSS和html5有关联呢" class="headerlink" title="1.如何让CSS和html5有关联呢/"></a>1.如何让CSS和html5有关联呢/</h1><blockquote>
+<p>引入外部css样式单文件，在html5的<code>&lt;head.../&gt;</code>元素内插入<code>&lt;link.../&gt;</code>子元素:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">     &lt;link herf=&quot;out.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">```  </span><br><span class="line">**直接在html5里面增加css样式采用的方法是直接在需要添加样式的标签上写`style=&quot;需要添加的样式属性&quot;`**</span><br><span class="line"></span><br><span class="line"># 2.如何在外部css样式单文件准确定位到需要添加样式的标签上呢?</span><br><span class="line"></span><br><span class="line">## 用css选择器来准确定位 那么css的选择器有哪些呢?有很多，那么下面我给大家一一介绍一下:</span><br><span class="line"></span><br><span class="line">### 1.[元素选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Type_selectors)</span><br><span class="line">### 2.[属性选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors)</span><br><span class="line">### 3.[id选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/ID_selectors)</span><br><span class="line">### 4.[类选择器](http://www.w3school.com.cn/cssref/selector_class.asp)</span><br><span class="line">### 5.[子选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_selectors)</span><br><span class="line">### 6.[后代选择器](http://www.w3school.com.cn/css/css_selector_descendant.asp)</span><br><span class="line"></span><br><span class="line"># 3.css的几种引入方式&#123;1.内联style属性 &#125; &#123;2.style标签&#125; &#123;3.外部文件css link&#125;</span><br><span class="line"></span><br><span class="line"># 4.学习css的几种资源:</span><br><span class="line">### 一.google关键词:MND</span><br><span class="line">### 二.CSS Tricks</span><br><span class="line">### 三.阮一峰 css</span><br><span class="line">### 四.张鑫旭的240多篇css博客</span><br><span class="line">### 五.Codrops 酷炫css效果</span><br><span class="line">### 六. css揭秘(推荐购买书籍)</span><br><span class="line">### 七.css 2.1中文spec (最权威的书其实就是文档)</span><br><span class="line"></span><br><span class="line">#4 针对`style=&quot;float:left&quot;`的bug的修复:</span><br></pre></td></tr></table></figure>
+<p>clearfix::after{<br>      content: ‘’;<br>      display:block;<br>      clear:both;<br>}<br><code>`</code></p>
+<blockquote>
+<p>注意添加<code>float:left</code>的子元素 其直属母元素上一定要加<code>clearfix</code></p>
+</blockquote>
+<h1 id="5-当你不知道自己-lt-div-gt-里面框的是什么的时候你可以在这个div里面加一个style-quot-border-1px-solid-red-quot-这个属性会让你直接看到div的框架。"><a href="#5-当你不知道自己-lt-div-gt-里面框的是什么的时候你可以在这个div里面加一个style-quot-border-1px-solid-red-quot-这个属性会让你直接看到div的框架。" class="headerlink" title="5.当你不知道自己&lt;div&gt;里面框的是什么的时候你可以在这个div里面加一个style=&quot;border:1px solid red&quot;这个属性会让你直接看到div的框架。"></a>5.当你不知道自己<code>&lt;div&gt;</code>里面框的是什么的时候你可以在这个div里面加一个<code>style=&quot;border:1px solid red&quot;</code>这个属性会让你直接看到<code>div</code>的框架。</h1><h1 id="6-我学习css中所用到的属性及其含义"><a href="#6-我学习css中所用到的属性及其含义" class="headerlink" title="6 我学习css中所用到的属性及其含义:"></a>6 我学习css中所用到的属性及其含义:</h1><blockquote>
+<p><code>padding:20px 0px 20px 0px</code>(padding是内边距 后面的数字意思分别是 上 右 下 左)</p>
+</blockquote>
+<blockquote>
+<p><code>margin</code>外边距 用法跟padding一样也是后面加所需要的数字</p>
+</blockquote>
+<blockquote>
+<p><code>text-decoration:none</code>(这个是样式 默认的样式是有下划线<code>underline</code>的 这个呢就是帮助你去掉下划线 也还有<code>overline</code>上划线等等)</p>
+</blockquote>
+<blockquote>
+<p><code>text-align:center</code>(文字居中的意思)</p>
+</blockquote>
+<blockquote>
+<p><code>font-weight:bold</code>(字体加粗)</p>
+</blockquote>
+<blockquote>
+<p><code>font-family:字体样式</code>(意思的选择你想要的字体样式)</p>
+</blockquote>
+<blockquote>
+<p><code>font-size</code>(字体大小tiaojie)</p>
+</blockquote>
+<blockquote>
+<p><code>display-block</code>(脱离文档流)</p>
+</blockquote>
+<blockquote>
+<p><code>background-position:center center</code>(背景图片居中)</p>
+</blockquote>
+<blockquote>
+<p><code>background-size:cover</code>(背景图片按比例缩放)</p>
+</blockquote>
+<blockquote>
+<p><code>mix-weight:100px</code>(最大宽度不超过100px)</p>
+</blockquote>
+<blockquote>
+<p><code>margin-left:auto ; margin-right:auto;</code>(可以实现水平居中)</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/27/HTML续/" rel="next" title="HTML续">
+                <i class="fa fa-chevron-left"></i> HTML续
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wang Gong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS是-Cascading-Style-Sheet-的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。"><span class="nav-number">1.</span> <span class="nav-text">CSS是(Cascading Style Sheet)的缩写，也被称为层叠样式单；主要用作网页风格设计，包括字体大小，颜色，以及元素的精确定位等。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-如何让CSS和html5有关联呢"><span class="nav-number">2.</span> <span class="nav-text">1.如何让CSS和html5有关联呢/</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-当你不知道自己-lt-div-gt-里面框的是什么的时候你可以在这个div里面加一个style-quot-border-1px-solid-red-quot-这个属性会让你直接看到div的框架。"><span class="nav-number">3.</span> <span class="nav-text">5.当你不知道自己&lt;div&gt;里面框的是什么的时候你可以在这个div里面加一个style=&quot;border:1px solid red&quot;这个属性会让你直接看到div的框架。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-我学习css中所用到的属性及其含义"><span class="nav-number">4.</span> <span class="nav-text">6 我学习css中所用到的属性及其含义:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Gong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
