@@ -229,6 +229,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/css布局初/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Gong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/17/css布局初/" itemprop="url">css布局初</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-17T21:17:45+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>本次我写的是关于CSS布局的一些方法，CSS布局就类似于排版，也是最基础的一项工作，想要写的文章让读者看的有耐心我觉得布局是必不可少的。下面我就列出一些css最基础的布局方式。</p>
+</blockquote>
+<h1 id="1-css的左右布局"><a href="#1-css的左右布局" class="headerlink" title="1.css的左右布局"></a>1.css的左右布局</h1><blockquote>
+<p>左右布局很常见，简单来说就是左边一个容器右边一个容器，哪里都会看到它的身影，就比如我现在在简书里写的markdown里面的预览模式一样，它也是左右布局的模式；但是通常我都会用<code>div</code>这个块级元素来创造我的模块，这时候问题就来了，<code>&lt;div&gt;</code>这个块级元素是独自霸占一行的，它的左右只有它自己这个时候如果你在加一个<code>&lt;div&gt;</code>它只会出现在上一个<code>&lt;div&gt;</code>的下面一行是不会出现在上一个<code>&lt;div&gt;</code>的左边的，那么如何是这两个<code>&lt;div&gt;</code>变成左右布局的呢? 下面有请我们的黑科技<code>float:left</code></p>
+</blockquote>
+<p><code>float:left</code>顾名思义是一种属性，它的加入给了块级元素浮动的效果 例:<br>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</span><br><span class="line">  &lt;title&gt;JS Bin&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;all clearfix&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;two&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>CSS:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.one&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background: black;</span><br><span class="line">  float:left;  </span><br><span class="line">&#125;</span><br><span class="line">.two&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background: red;</span><br><span class="line">  float:left;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>我在两个子元素里加了<code>float:left</code> 之后它们脱离了文档流 ，就像内联元素一样可以在一行里显示了，自然也变成了左右布局。</p>
+</blockquote>
+<h1 id="2-css的水平居中"><a href="#2-css的水平居中" class="headerlink" title="2.css的水平居中"></a>2.css的水平居中</h1><blockquote>
+<p>什么叫水平居中?就是一个子容器在自己的父容器中处于水平中间的位置。以文档流的形式来看就是一段文字处在这一行的最中间的位置。那如何实现它们的水平居中呢? 我们可以用<code>margin:0 auto</code>或者可以使用<code>text-align:center</code></p>
+</blockquote>
+<blockquote>
+<p>方法一:使用<code>margin:0 auto</code>从而获得水平居中 例:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.one&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background: black;</span><br><span class="line">  margin:0 auto;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>方法二 脱离文档流从而获取水平居中<br>给目标设置一个父元素 然后给目标<code>div</code>变成脱离文档流状态( 可以使用<code>display:inline-block</code>来实现脱离文档流) 然后我们把<code>text-align:center</code>写在父元素上 这样我们就也是先了水平居中状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.all&#123;</span><br><span class="line">  border:1px solid red;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.one&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background: black;</span><br><span class="line">  display:inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>###水平居中和垂直居中的区别 :<br>水平居中：文字的左右两边的间距是一样的，<br>垂直居中:文字的上边和下边的间距是一样的。</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/11708594-77a5800d9df1aedf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h1 id="3-垂直居中"><a href="#3-垂直居中" class="headerlink" title="3.垂直居中"></a>3.垂直居中</h1><blockquote>
+<p>垂直居中相信看了上面的图片大家就明白它和水平居中的区别了那么如何做到垂直居中呢?我是这样做的 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.all&#123;</span><br><span class="line">  width:500px;</span><br><span class="line">  height:500px;</span><br><span class="line">  border:1px solid red;</span><br><span class="line">  text-align: center;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.one&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background: black;</span><br><span class="line">  margin: auto;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0; left: 0; bottom: 0; right: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>1在普通文档流里，<code>margin: auto;</code> 的意思是设置元素的margin-top和margin-bottom为0;</p>
+</blockquote>
+<blockquote>
+<p>2.设置了position: absolute; 的元素会变成块元素，并脱离普通文档流。而文档的其余部分照常渲染，元素像是不在原来的位置一样。</p>
+</blockquote>
+<blockquote>
+<p>3.设置了top: 0; left: 0; bottom: 0; right: 0; 样式的块元素会让浏览器为它包裹一层新的盒子，因此这个元素会填满它相对父元素的内部空间，这个相对父元素可以是是body标签，或者是一个设置了position: relative; 样式的容器。</p>
+</blockquote>
+<h1 id="4-css的其它小技巧"><a href="#4-css的其它小技巧" class="headerlink" title="4.css的其它小技巧"></a>4.css的其它小技巧</h1><blockquote>
+<p>1.使用<code>border:1px solid red</code>来显示所包裹的物体的具体位置及大小往往是很有用的。</p>
+</blockquote>
+<blockquote>
+<p>2.比如说在做一个导航栏你想给每个链接下面鼠标罗上去都会出现一个下边框时，如果你直接加一个<code>hover</code>然后你面给一个<code>border-bottom:1px solid black</code>时，当你去点击这些<code>&lt;a&gt;</code>标签时虽然会出现下划线但是你的导航栏会抖动 那么如何解决呢?很简单你只要在原来的<code>&lt;a&gt;</code>标签上协商这样一段代码<code>border-bottom:1px solid transparent</code>这样的原理呢是在原来的<code>&lt;a&gt;</code>标签上加上一个同名的下划线来占位 这样当我们鼠标点击的时候就不会再出现位置不足而抖动的情况了</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/初学css/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1574,137 +1736,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Gong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MyBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/18/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T11:33:58+08:00">
-                2018-04-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1748,7 +1786,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
